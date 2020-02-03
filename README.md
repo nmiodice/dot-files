@@ -1,4 +1,4 @@
-# dot-files
+# fresh-install
 
 The content of the repository here are mostly borrowed from various blog posts,
 github repos or stack overflow posts. I include them here only to simplify the
