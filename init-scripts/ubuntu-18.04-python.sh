@@ -8,8 +8,5 @@
 
 set -euo pipefail
 
-./ubuntu-18.04-init.sh
-./ubuntu-18.04-docker.sh
-./ubuntu-18.04-python.sh
-./ubuntu-18.04-profile.sh
+sudo apt install python3-pip -y
 
