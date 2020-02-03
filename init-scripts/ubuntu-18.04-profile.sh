@@ -9,6 +9,7 @@ set -euo pipefail
 TMP_DIR="/tmp/sysconfig.tmp/"
 
 
+git config --global credential.helper store
 sudo apt-get install -y \
     cowsay \
     fortune \
