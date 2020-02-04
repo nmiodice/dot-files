@@ -9,6 +9,12 @@ set -euo pipefail
 TMP_DIR="/tmp/sysconfig.tmp/"
 
 
+# install latest git
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt-get update
+sudo apt-get install git -y
+
+
 git config --global credential.helper store
 sudo apt-get install -y \
     cowsay \
