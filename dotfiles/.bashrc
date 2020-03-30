@@ -19,6 +19,8 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"
 export GOROOT=/usr/local/go
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export GREP_COLOR='1;32'
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
