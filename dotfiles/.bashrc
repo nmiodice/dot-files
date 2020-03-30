@@ -7,7 +7,10 @@
 #
 
 # Prompt formatting
-export PS1="\[$(tput setaf 1)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 6)\]ubuntu-18\[$(tput setaf 7)\]:\[$(tput setaf 1)\] \W\[$(tput sgr0)\] $ "
+
+if [[ $- == *i* ]]; then
+    export PS1="\[$(tput setaf 1)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 6)\]ubuntu-18\[$(tput setaf 7)\]:\[$(tput setaf 1)\] \W\[$(tput sgr0)\] $ "
+fi
 
 export BRC="~/.bashrc"
 export JAVA_HOME="/usr/lib/jvm/jdk8u212-b04/"
@@ -36,8 +39,9 @@ alias sublime="subl"
 #
 # Fun stuff
 #
-cowthink -f "$HOME/workspace/personal/cowsay-cows/cycling.cow" $(fortune)
-
+if [[ $- == *i* ]]; then
+    cowthink -f "$HOME/workspace/cowsay-cows/cycling.cow" $(fortune)
+fi
 
 
 
@@ -140,4 +144,6 @@ if ! shopt -oq posix; then
 fi
 
 # Use direnv to load .envrc files
-eval "$(direnv hook bash)"
+if [[ $- == *i*  ]]; then
+    eval "$(direnv hook bash)"
+fi
